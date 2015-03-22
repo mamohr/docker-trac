@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER = Jason M. Mills <jmmills@cpan.org>
+MAINTAINER = Mario Mohr <mohr.mario@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
   trac \
@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
   trac-announcer \
   trac-graphviz \
   python-flup
+
+ENV ADMIN_PASSWORD=admin TRAC_ENV="/trac"
 
 ADD setup_trac_config.sh /.setup_trac_config.sh
 ADD setup_trac.sh /.setup_trac.sh
