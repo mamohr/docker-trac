@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y \
   trac-tags \
   trac-diavisview \
   trac-announcer \
-  trac-batchmodify \
-  trac-graphviz python-flu
+  trac-graphviz \
+  python-flup
 
 ADD setup_trac_config.sh /.setup_trac_config.sh
 ADD setup_trac.sh /.setup_trac.sh
