@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
   trac-graphviz \
   python-flup
 
-ENV ADMIN_PASSWORD=admin TRAC_ENV="/trac"
+ENV ADMIN_PASSWORD=admin TRAC_ENV="/trac" PROJECT_NAME="trac"
 
 ADD setup_trac_config.sh /.setup_trac_config.sh
 ADD setup_trac.sh /.setup_trac.sh
