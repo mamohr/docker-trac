@@ -26,15 +26,14 @@ setup_admin_user() {
 
     if [ ! -f /.trac_admin_password ]
     then
-        TRAC_PASS=$(pwgen -1 10 -s)
         _S=$(printf '=%0.s' {1..50})
-        set_trac_user_password.py /trac admin ${TRAC_PASS}
+        set_trac_user_password.py /trac admin ${ADMIN_PASSWORD}
         echo $_S
         echo Trac admin login
             echo -e "\tUser: admin"
-            echo -e "\tPassword: ${TRAC_PASS}"
+            echo -e "\tPassword: ${ADMIN_PASSWORD}"
         echo $_S
-        echo ${TRAC_PASS} >/.trac_admin_password
+        echo ${ADMIN_PASSWORD} >/.trac_admin_password
     fi
 
 }
