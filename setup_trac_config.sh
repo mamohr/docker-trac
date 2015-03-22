@@ -1,6 +1,7 @@
 setup_components() {
-    trac-admin /trac config set components trac.web.auth.LoginModule disabled 
+    trac-admin /trac config set components trac.web.auth.LoginModule disabled
     trac-admin /trac config set components acct_mgr.web_ui.* enabled 
+    trac-admin /trac config set components acct_mgr.web_ui.EmailVerificationModule disabled
     trac-admin /trac config set components acct_mgr.admin.* enabled 
     trac-admin /trac config set components acct_mgr.register.* enabled 
     trac-admin /trac config set components acct_mgr.notification.* enabled 
